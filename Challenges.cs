@@ -41,7 +41,7 @@ namespace MyGame
                 }
                 else
                 {
-                    Console.WriteLine("Try again");
+                    Console.WriteLine("Try aaagain");
                     continue;
 
 
