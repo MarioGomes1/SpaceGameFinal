@@ -15,7 +15,7 @@ namespace MyGame
         public int Tokens { get; set; }
         public Player()
         {
-            this.Tokens = 500;
+            this.Tokens = 5000;
 
 
 
