@@ -11,27 +11,33 @@ namespace MyGame
     {
         public Write(Player player)
         {
-            
-            var challenges = new Challenges(player, Replies());
+            //
+            var challenges = new Challenges(player, Replies()); //Calling and passing 'Replies' method, passing player class
         }
-        public static string Replies()
+
+        public static string Replies() //this method is being ^ called
         {
 
             string firstAnswer;
-            Console.WriteLine("You have encountered your first challenge...to pass you must answer the following question");
+            Console.WriteLine(
+                "You have encountered your first challenge...to pass you must answer the following question");
             Console.WriteLine("spell Mario");
             firstAnswer = Console.ReadLine();
             return firstAnswer;
-
-            Console.WriteLine(
-                "You have just passed your first challenge, you are on your way to planet 2 too get some \n" +
-                "resources. Use your tokens wisely.");
-
-
         }
-    }
 
+        public static string Planet2Store()
 
+        {
+            string userInputforplanet2;
+            Console. WriteLine(
+            "You have just passed your first challenge, you are on your way to planet 2 too get some \n" +
+            "resources. Use your tokens wisely.");
+            userInputforplanet2 = Console.ReadLine();
+            return userInputforplanet2;
+        }
+    } 
+    
     class Program
     {
 

@@ -10,11 +10,11 @@ namespace MyGame
     {
        public enum Resources
        {
-           Water,
-           Fuel,
-           firstAid,
-           food,
-           clothing
+           Water = 50,
+           Fuel = 50,
+           firstAid = 50,
+           food = 50,
+           clothing = 50
 
        }
 
