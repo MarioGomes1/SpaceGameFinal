@@ -8,7 +8,15 @@ namespace MyGame
 {
     public class Product
     {
-        // Becuase it has stats?
+       public enum Resources
+       {
+           Water,
+           Fuel,
+           firstAid,
+           food,
+           clothing
+
+       }
 
     }
 }

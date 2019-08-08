@@ -23,8 +23,11 @@ namespace MyGame
             firstAnswer = Console.ReadLine();
             return firstAnswer;
 
+            Console.WriteLine(
+                "You have just passed your first challenge, you are on your way to planet 2 too get some \n" +
+                "resources. Use your tokens wisely.");
 
-           
+
         }
     }
 
@@ -38,7 +41,7 @@ namespace MyGame
             var player = new Player();//pass parameter/tokens 
             var write = new Write(player);
 
-           
+           //only objects
 
         }
     }
