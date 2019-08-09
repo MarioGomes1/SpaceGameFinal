@@ -8,43 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    class Write
-    {
-        public string FirstAnswer { get; set; }
-        public Write(Player player)
-        {
-            
-            
-            Replies();
-        }
-
-        public Write(string firstAnswer)
-        {
-            this.FirstAnswer = firstAnswer;
-        }
-
-        public static string Replies() //this method is being ^ called
-        {
-
-            string firstAnswer;
-            Console.WriteLine(
-                "You have encountered your first challenge...to pass you must answer the following question");
-            Console.WriteLine("spell Mario");
-            firstAnswer = Console.ReadLine();
-            return firstAnswer;
-        }
-
-        public static string Planet2Store()
-
-        {
-            string userInputForPlanet2;
-            Console. WriteLine(
-            "You have just passed your first challenge, you are on your way to planet 2 too get some \n" +
-            "resources. Use your tokens wisely.");
-            userInputForPlanet2 = Console.ReadLine();
-            return userInputForPlanet2;
-        }
-    } 
+ 
     
     class Program
     {
@@ -52,13 +16,19 @@ namespace MyGame
 
         static void Main(string[] args)
         {
-            var player = new Player();//pass parameter/tokens 
-            var write = new Write(player);
-            var challenges = new Challenges(player, write);
+            var player = new Player(500);
+            var write = new Write();
+            var challenges = new Challenges(player);
+            var world = new World(player, write);
+            Console.WriteLine(player._tokens);
+           
             
 
 
-            //only objects
+
+
+
+
 
         }
     }

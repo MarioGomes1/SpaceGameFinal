@@ -11,22 +11,20 @@ namespace MyGame
     {
 
         public string FirstAnswer { get; set; }
-        public int Tokens { get; set; }
+        public int Tokens {get; set; }
 
-        public Challenges(Player player, Write write)
+        public Challenges(Player player)
         {
-            this.Tokens = player.Tokens;
-            this.FirstAnswer = write.FirstAnswer;
-            answer(FirstAnswer);
-
+            this.Tokens = player._tokens;
+            answer();
+            player._tokens = Tokens;
         }
 
-        //public Challenges(string ans)
-        //
 
-        public void answer(string firstAnswer)
+
+        public void answer()
         {
-            this.FirstAnswer = firstAnswer;
+            string firstAnswer;
 
 
             while (true)
@@ -37,14 +35,16 @@ namespace MyGame
                 {
                     Console.WriteLine("Correct");
                     Tokens += 50;
-                    //Console.WriteLine("You now have: {0} tokens",Tokens);//test-delete code 
+                    Console.WriteLine("You now have: {0} tokens",Tokens);//test-delete code 
                     break;
 
                 }
                 else
                 {
-                    Console.WriteLine("Try aaagin");
-                    continue;
+
+                    Console.WriteLine("Incorrect, you have lost 50 Tokens");//implement a forloop for tokens?
+                    Tokens -= 50;
+                    
 
 
                 }
