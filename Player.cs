@@ -9,9 +9,6 @@ namespace MyGame
 {
     public class Player
     {
-
-        
-
         public int Tokens { get; set; }
         public Player()
         {

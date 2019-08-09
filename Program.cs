@@ -5,14 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MyGame
 {
     class Write
     {
+        public string FirstAnswer { get; set; }
         public Write(Player player)
         {
-            //
-            var challenges = new Challenges(player, Replies()); //Calling and passing 'Replies' method, passing player class
+            
+            
+            Replies();
+        }
+
+        public Write(string firstAnswer)
+        {
+            this.FirstAnswer = firstAnswer;
         }
 
         public static string Replies() //this method is being ^ called
@@ -29,12 +37,12 @@ namespace MyGame
         public static string Planet2Store()
 
         {
-            string userInputforplanet2;
+            string userInputForPlanet2;
             Console. WriteLine(
             "You have just passed your first challenge, you are on your way to planet 2 too get some \n" +
             "resources. Use your tokens wisely.");
-            userInputforplanet2 = Console.ReadLine();
-            return userInputforplanet2;
+            userInputForPlanet2 = Console.ReadLine();
+            return userInputForPlanet2;
         }
     } 
     
@@ -46,8 +54,11 @@ namespace MyGame
         {
             var player = new Player();//pass parameter/tokens 
             var write = new Write(player);
+            var challenges = new Challenges(player, write);
+            
 
-           //only objects
+
+            //only objects
 
         }
     }

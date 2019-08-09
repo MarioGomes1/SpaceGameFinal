@@ -10,8 +10,12 @@ namespace MyGame
 {
     public class World
     {
-
-
+        public int Tokens;
+        public World(Player player)
+        {
+            this.Tokens = player.Tokens;
+            Console.WriteLine(Tokens);
+        }
 
     }
 }

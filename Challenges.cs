@@ -13,10 +13,12 @@ namespace MyGame
         public string FirstAnswer { get; set; }
         public int Tokens { get; set; }
 
-        public Challenges(Player player, string ans)
+        public Challenges(Player player, Write write)
         {
             this.Tokens = player.Tokens;
-            answer(ans);
+            this.FirstAnswer = write.FirstAnswer;
+            answer(FirstAnswer);
+
         }
 
         //public Challenges(string ans)
