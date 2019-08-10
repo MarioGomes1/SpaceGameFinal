@@ -11,6 +11,9 @@ namespace MyGame
 {
      public class Player
     {
+        //player to world not world to player.
+        public World CurrentWorld { get; set; }//research
+
         public List<Product> Product = new List<Product>();
         public  int _tokens { get; set; }
         public Player(int tokens)
