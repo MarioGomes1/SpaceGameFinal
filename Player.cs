@@ -11,18 +11,24 @@ namespace MyGame
 {
      public class Player
     {
+        public Player CurrentPlayer { get; set; }
         //player to world not world to player.
         public World CurrentWorld { get; set; }//research
 
         public List<Product> Product = new List<Product>();
-        public  int _tokens { get; set; }
+       public  int Tokens { get; set; }
         public Player(int tokens)
         {
 
-            _tokens = tokens;
-          
+            this.Tokens = tokens;
 
 
+
+        }
+
+        public Player()
+        {
+            
         }
 
        

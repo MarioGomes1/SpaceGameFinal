@@ -9,30 +9,25 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
+
     public class World
     {
-        public int tokens { get; set; }
-        public int _purchase { get; set; }
+
+        public Player CurrentPlayer { get; set; }
+        //public int tokens { get; set; }
+        public int Decision { get; set; }
         public World(Player player, Write write)
         {
+            CurrentPlayer = player;
+            //this.tokens = player._tokens;
+            Decision = write.Planets1();
+            Decision = write.Planets2();
+            Console.Clear();
 
-            this.tokens = player._tokens;
-           _purchase= write.Planets();
+            if (Decision == 1) Buy();
            
-         
-           if (_purchase == 1) 
-           {
-               Buy();
-               player._tokens = this.tokens;
-            }
-           else if (_purchase==2)
-           {
-               Sell();
-               player._tokens = this.tokens;
-            }
-
-           
-
+            else if (Decision == 2) Sell();
+            
         }
 
 
@@ -42,21 +37,21 @@ namespace MyGame
         {
 
 
-            Console.WriteLine("You have chosen to buy. Here are your options \n 1 for water \n 2 for food");
+            Console.WriteLine("You have chosen to buy. Here are your options \n [1] for water \n [2] for food");
             int buy = Convert.ToInt32(Console.ReadLine());
             if (buy==1)
             {
-                tokens -= 50;
+                CurrentPlayer.Tokens -= 50;
                 
             }
 
-            return tokens;
+            return CurrentPlayer.Tokens;
 
         }
 
         public void Sell()
         {
-            Console.WriteLine("You have chosen to sell. Here are your options \n 1 for water \n 2 for food");
+            Console.WriteLine("You have chosen to sell. Here are your options \n [1] for water \n [2] for food");
         }
     }
 }

@@ -8,13 +8,14 @@ namespace MyGame
 {
     public class Enum
     {
-            public enum Resources
-            {
-                Water = -50,
-                Fuel = 50,
-                firstAid = 50,
-                food = 50,
-                clothing = 50
-            }
+        public enum ProductTypes
+        {
+            None = 0,
+            Water = 1,
+            Food = 2,
+            Fuel = 3,
+            Clothes = 4,
+            FirstAid = 5
+        }
         }
 }

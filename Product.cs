@@ -9,9 +9,9 @@ namespace MyGame
 {
     public class Product
     {
-        public Resources Resource { get; set; }
-       
-        
+        public ProductTypes ProductType { get; set; }
+
+
 
     }
 }

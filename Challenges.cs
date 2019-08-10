@@ -10,15 +10,15 @@ namespace MyGame
     class Challenges
     {
         public Player CurrentPlayer { get; set; }
-        public string FirstAnswer { get; set; }//not needed? clean up.
+        //public string FirstAnswer { get; set; }//not needed? clean up.
         //public int Tokens {get; set; }
 
         public Challenges(Player player)
         {
             CurrentPlayer = player;//how????
-            //this.Tokens = player._tokens;
+            
             answer();
-            //player._tokens = Tokens;
+           
         }
         
         public static void LuigiQuestion(Player p)//turn questions to list?...research list
@@ -26,7 +26,7 @@ namespace MyGame
             // ask specific luigi quesiton
             // p.Tokens
         }
-
+        
         public void answer()
         {
             string firstAnswer;
@@ -36,19 +36,31 @@ namespace MyGame
             {
                 Console.WriteLine("Enter your answer");
                 firstAnswer = Console.ReadLine();
+                Console.Clear();
                 if (firstAnswer == "Mario")
                 {
                     Console.WriteLine("Correct");
-                    CurrentPlayer._tokens += 50;//todo look further
-                    Console.WriteLine("You now have: {0} tokens",Tokens);//test-delete code 
+                    CurrentPlayer.Tokens += 50;//todo look further
+                    Console.WriteLine("You now have: {0} tokens",CurrentPlayer.Tokens);
+                    Console.ReadLine();
+                    
                     break;
 
                 }
                 else
                 {
                     // todo: break when Tokens <= 0;
-                    Console.WriteLine("Incorrect, you have lost 50 Tokens");//implement a forloop for tokens?
+                   
                     CurrentPlayer.Tokens -= 50;
+                    Console.WriteLine("Incorrect, you have lost 50 Tokens. You have {0} Tokens left....Type your answer again.", CurrentPlayer.Tokens);//implement a forloop for tokens?
+                    
+                    
+                   
+
+                    if (CurrentPlayer.Tokens == 0) 
+                    {
+                        
+                    }
                     
 
 

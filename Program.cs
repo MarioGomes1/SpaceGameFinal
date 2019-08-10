@@ -19,14 +19,15 @@ namespace MyGame
 
         static void Main(string[] args)
         {
-            //var player = new Player(500);
+            var player = new Player(500);
 
             var write = new Write();
-            //var challenges = new Challenges(player);
+            var challenges = new Challenges(player);
             var world = new World(player, write);
-            Console.WriteLine(player._tokens);
+            
+           
 
-            Challenges.LuigiQuestion(player);
+            //Challenges.LuigiQuestion(player);
 
             //todo research list, property/ public Player CurrentPlayer { get; set; }(how does this work exactly?)
             //todo inheritance
