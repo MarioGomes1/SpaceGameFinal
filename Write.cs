@@ -122,7 +122,7 @@ namespace MyGame
             Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
            
             Console.WriteLine("An enumeration is a__________type\n[1]reference\n[2]value[3]object\n[4]reference AND value");//TODO 2-input question here
-             //int ans = Convert.ToInt32(Console.ReadLine());
+            // int ans = Convert.ToInt32(Console.ReadLine());
              //this.Decision = Decision = Convert.ToInt32(Console.ReadLine());
              //return Decision;
         }

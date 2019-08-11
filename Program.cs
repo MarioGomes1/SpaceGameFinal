@@ -25,9 +25,10 @@ namespace MyGame
             var player = new Player(500, 100);
 
             var write = new Write(player);
-            var challenges = new Challenges(player);
+            var challenges = new Challenges(player, write);
             var world = new World(player, write);
-            var challenges1 = new Challenges(write);
+            var challenges1 = new Challenges(write,player);
+            //back here after second answer
             
            
 
