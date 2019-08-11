@@ -17,10 +17,13 @@ namespace MyGame
 
         public List<Product> Product = new List<Product>();
        public  int Tokens { get; set; }
-        public Player(int tokens)
+       public double Fuel { get; set; }    
+        public Player(int tokens, double fuel)
         {
 
             this.Tokens = tokens;
+            this.Fuel = fuel;
+
 
 
 

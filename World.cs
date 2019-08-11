@@ -21,39 +21,48 @@ namespace MyGame
             CurrentPlayer = player;
             //this.tokens = player._tokens;
             Decision = write.Planets1();
-            Decision = write.Planets2();
             Console.Clear();
-
             if (Decision == 1) Buy();
            
             else if (Decision == 2) Sell();
-            
+            //Decision = write.SecondChan();
+
         }
 
 
 
 
-        public int Buy()
+        public double Buy()
         {
+            CurrentPlayer.Fuel *= 0.75; 
+           
+            
 
-
-            Console.WriteLine("You have chosen to buy. Here are your options \n [1] for water \n [2] for food");
+            Console.WriteLine("You have chosen to buy.To refuel back to 100% it will cost you 150 tokens");
             int buy = Convert.ToInt32(Console.ReadLine());
-            if (buy==1)
-            {
-                CurrentPlayer.Tokens -= 50;
-                
-            }
 
-            return CurrentPlayer.Tokens;
+
+            return CurrentPlayer.Tokens -= 150;
+
+
+           
 
         }
 
         public void Sell()
         {
-            Console.WriteLine("You have chosen to sell. Here are your options \n [1] for water \n [2] for food");
+            
+            
+            Console.WriteLine("You have chosen to sell. The shop on this planet will pay you 100 tokens for 25% of your fuel");
+
+            CurrentPlayer.Fuel -= 50;
+
+            //CurrentPlayer.Tokens += 100;
+
         }
+        
     }
+    
 }
 
 

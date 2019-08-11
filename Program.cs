@@ -12,18 +12,22 @@ namespace MyGame
     
     class Program
     {
-        public Player CurrentPlayer { get; set; } = new Player(500);
+
+        public Player CurrentPlayer { get; set; } = new Player(500, 100);
         // list of worlds
         //research prop/program implementation
         //
 
         static void Main(string[] args)
         {
-            var player = new Player(500);
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            var player = new Player(500, 100);
 
-            var write = new Write();
+            var write = new Write(player);
             var challenges = new Challenges(player);
             var world = new World(player, write);
+            var challenges1 = new Challenges(write);
             
            
 
